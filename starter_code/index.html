@@ -2,11 +2,57 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Functions Lab</title>
+	<title>Functions</title>
+	<style>
+		div {
+			margin: auto;
+			width: 50%;
+			padding: 20px 0 0 0;
+					}
+		h1 {
+			text-align: left;
+		}
+		span {
+			color: red;
+			font-weight:700;
+		}
+		button{
+			margin: 10px 0 0 0;
+			padding: 0 150px 0 150px;
+		}
+		input{
+			margin: 5px;
+		}
+	</style>
 </head>
 <body>
+	<div>
 	<h1>Functions Lab</h1>
-	
+
+	<form action="#" method="get" onsubmit="return unesi()">
+		Number 1: <input type="number" name="a" id="a"><br>
+		Number 2: <input type="number" name="b" id="b"><br>
+		Number 3: <input type="number" name="c" id="c"><br>
+		Letter: <input type="text" name = "char" id = "char"><br>
+		List (separated by commas): <input type="text" name = "list" id = "list"><br>
+		List Filter (n=int): <input type="number" name="n" id="n"><br>
+		String: <input type="text" name = "str" id = "str"><br>
+		<button onclick=results() type="button">GO</button>
+	 </form>
+
+	<p>Max of first 2 numbers: <span id="maxOfTwoNumbers"></span> </p>
+	<p>Max of first 3 numbers: <span id="maxOfThree"></span></p>
+	<p>Is the letter a vowel?: <span id="isCharacterAVowel"></span></p>
+	<p>Sum of the first 3 numbers: <span id="sumArray"></span></p>
+	<p>Product of the first 3 numbers: <span id="multiplyArray"></span></p>
+	<p>Number of Arguments in the List: <span id="numberOfArguments"></span></p>
+	<p>Reversed String: <span id="reverseString"></span></p>
+	<p>The Longest Word in the List (shows last longest): <span id="findLongestWord"></span></p>
+	<p>Words in the List longer than n: <span id="filterLongWords"></span></p>
+	<p>The # of char occurences in a string: <span id="characterOccurencesCount"></span></p>
+
+
 	<script src="main.js"></script>
+	</div>
 </body>
 </html>
