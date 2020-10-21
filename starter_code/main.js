@@ -5,21 +5,32 @@ function unesi(){
 }
 
 function results(){
-    let a = parseInt(document.getElementById('a').value);
-    let b = parseInt(document.getElementById('b').value);
-    let c = parseInt(document.getElementById('c').value);
-    let char = document.getElementById('char').value;
-    let n = document.getElementById('n').value;
-    let arr = [a, b, c]
-    let list = document.getElementById('list').value.split(',');
-    let str = document.getElementById('str').value;
+    var a = parseInt(document.getElementById('a').value);
+    var b = parseInt(document.getElementById('b').value);
+    var c = parseInt(document.getElementById('c').value);
+    var char = document.getElementById('char').value;
+    var n = document.getElementById('n').value;
+    var arr = [a, b, c]
+    var list = document.getElementById('list').value.split(',');
+    //var arguments = document.getElementById('list').value.split(',');
+    var str = document.getElementById('str').value;
+
+
+    // document.write(maxOfTwoNumbers(a, b));
+    // document.write(maxOfThree(a,b,c));
+    // document.write(isCharacterAVowel(char));
+    // document.write(sumArray(arr));
+    // document.write(multiplyArray(arr));
+    // document.write(numberOfArguments(arguments))
+    // document.write(reverseString(str));
+    // document.write(findLongestWord(arr));
 
     document.getElementById('maxOfTwoNumbers').innerHTML = maxOfTwoNumbers(a, b);
     document.getElementById('maxOfThree').innerHTML = maxOfThree(a, b, c);
     document.getElementById('isCharacterAVowel').innerHTML = isCharacterAVowel(char);
     document.getElementById('sumArray').innerHTML = sumArray(arr);
     document.getElementById('multiplyArray').innerHTML = multiplyArray(arr);
-    document.getElementById('numberOfArguments').innerHTML = numberOfArguments(...list);
+    document.getElementById('numberOfArguments').innerHTML = numberOfArguments(list);
     document.getElementById('reverseString').innerHTML = reverseString(str);
     document.getElementById('findLongestWord').innerHTML = findLongestWord(list);
     document.getElementById('filterLongWords').innerHTML = filterLongWords(n, list);
@@ -28,7 +39,7 @@ function results(){
 }
 
 
-// Question 1
+// Question 1 ✓
 maxOfTwoNumbers = (a,b) => {
     return Math.max(a,b);
 }
@@ -71,8 +82,7 @@ multiplyArray = (arr) => {
 
 // Question 5
 numberOfArguments = (list) => {
-
-    return numberOfArguments.length;
+    return list.length;
 }
 
 
@@ -132,5 +142,4 @@ characterOccurencesCount = (str) => {
     return JSON.stringify(x);
 
 }
-
 
