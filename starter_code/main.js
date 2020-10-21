@@ -1,6 +1,6 @@
 function unesi(){
-    var userInput = document.getElementById('userInput').value;
-    document.getElementById('ispis').innerHTML = userInput;
+    // var userInput = document.getElementById('userInput').value;
+    // document.getElementById('ispis').innerHTML = userInput;
     return false;
 }
 
@@ -9,7 +9,7 @@ function results(){
     var b = parseInt(document.getElementById('b').value);
     var c = parseInt(document.getElementById('c').value);
     var char = document.getElementById('char').value;
-    var n = document.getElementById('n').value;
+    var n = parseInt(document.getElementById('n').value);
     var arr = [a, b, c]
     var list = document.getElementById('list').value.split(',');
     //var arguments = document.getElementById('list').value.split(',');
@@ -34,6 +34,7 @@ function results(){
     document.getElementById('reverseString').innerHTML = reverseString(str);
     document.getElementById('findLongestWord').innerHTML = findLongestWord(list);
     document.getElementById('filterLongWords').innerHTML = filterLongWords(n, list);
+    document.getElementById('logBetween').innerHTML  = logBetween(sumArray(arr),multiplyArray(arr));
     document.getElementById('characterOccurencesCount').innerHTML = characterOccurencesCount(str);
 
 }
@@ -100,12 +101,11 @@ reverseString = (str) => {
 findLongestWord = (arr) => {
     let x = '';
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > x.length){
+        if (arr[i].trim().length > x.length){
             x = arr[i];
         }
     }
     return x;
-
 }
 
 
@@ -113,7 +113,7 @@ findLongestWord = (arr) => {
 filterLongWords = (n, arr) => {
     let x = []
     for (let i=0; i<arr.length; i++) {
-        if (arr[i].length > n) {
+        if (arr[i].trim().length > n) {
             x.push(arr[i]);
         }
     }
@@ -123,6 +123,16 @@ filterLongWords = (n, arr) => {
 
 
 // Bonus 1
+function logBetween(lowNum, highNum) {
+    let x = [];
+    for (let i=lowNum; i<=highNum; i++){
+        x.push(i);
+    }
+    return x;
+
+}
+
+// Bonus 2
 characterOccurencesCount = (str) => {
     // create a dictionary
     // for each char
