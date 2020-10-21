@@ -31,7 +31,7 @@ function maxOfThree(x, y, z) {
 }
 
 //tests
-console.log('Max of three:');
+console.log('\n\nMax of three:');
 console.log(maxOfThree(1, 2, 3), 3);
 console.log(maxOfThree(1, 4, 3), 4);
 console.log(maxOfThree(1, -2, -3), 1);
@@ -54,7 +54,7 @@ function isCharacterAVowel(char) {
 }
 
 //tests
-console.log('Is vowel:');
+console.log('\n\nIs vowel:');
 console.log(isCharacterAVowel('a'), true);
 console.log(isCharacterAVowel('i'), true);
 console.log(isCharacterAVowel('f'), false);
@@ -80,7 +80,7 @@ function multiplyArray(array) {
 }
 
 //tests
-console.log('Sum and multiply array:');
+console.log('\n\nSum and multiply array:');
 console.log(sumArray([1, 2, 3, 4]), 10);
 console.log(multiplyArray([1, 2, 3, 4]), 24);
 console.log(sumArray([-1, 2, 3, 4]), 8);
@@ -90,12 +90,13 @@ console.log(multiplyArray([1, 2, -3, 4]), -24);
 
 // Question 5
 //Write a function that returns the number of arguments passed to the function when called.
-var numberOfArguments = function() {
-    return arguments.length;
+var numberOfArguments = function(...args) {
+    return args.length;
+    //note to self: leaving parameters blank and using arguments.length also works
 }
 
 //tests
-console.log('Number of args:');
+console.log('\n\nNumber of args:');
 console.log(numberOfArguments(1, 2, 3, 4), 4);
 console.log(numberOfArguments(1, 2), 2);
 console.log(numberOfArguments(), 0);
@@ -118,7 +119,7 @@ var reverseString = function(str) {
 };
 
 //tests
-console.log('Reverse string:');
+console.log('\n\nReverse string:');
 console.log(reverseString('Reverse this!'), '!siht esreveR');
 
 // Question 7
@@ -135,7 +136,7 @@ function findLongestWord(strArray) {
 }
 
 //tests
-console.log('Find longest word:');
+console.log('\n\nFind longest word:');
 console.log(findLongestWord(['a', 'ab', 'abc']), 3);
 console.log(findLongestWord(['a', 'ab', 'ab']), 2);
 console.log(findLongestWord(['a', 'abc', 'ab']), 3);
@@ -163,16 +164,39 @@ function filterLongWords(strArray, i) {
 }
 
 //tests
-console.log('Long word Filter:');
+console.log('\n\nLong word Filter:');
 console.log(filterLongWords(['hello', 'this', 'word', 'is', 'unacceptable'], 4), ['hello', 'unacceptable']);
 console.log(filterLongWords(['ok', 'ok', 'ok'], 2), 'This is acceptable');
 console.log(filterLongWords(['', ''], 1), 'This is acceptable');
 
 // Bonus 1
-//?????
+// Define a function logBetween(lowNum, highNum) that will print every number from lowNum to highNum, inclusive. Inclusive means that the range includes lowNum and highNum. Hint: this function only needs to print using console.log, it does not need to return.
+function logBetween(lowNum, highNum) {
+    if (!Number.isInteger(lowNum) || !Number.isInteger(highNum)) {
+        console.log('Please enter integers');
+        return;
+    }
+    if (lowNum > highNum) {
+        let temp = lowNum;
+        lowNum = highNum;
+        highNum = temp;
+    }
+    while (lowNum <= highNum) {
+        console.log(lowNum);
+        lowNum += 1;
+    }
+}
+
+console.log('\n\nLog Between');
+logBetween(-1, 10);
+logBetween(-1, 0);
+logBetween(1, 10);
+logBetween(17, 10);
+logBetween(17.5, 10);
+logBetween(17, 'a');
+logBetween('10', 17);
 
 /*For this bonus, you'll have to do some research on objects.
-
 Write a function that takes a string as an argument and returns an object where:
 The keys are the characters that occur in the string.
 The values are the number of occurrences for each letter, regardless of the case. */
@@ -194,7 +218,7 @@ function charactersOccurencesCount(str) {
     return strObj;
 }
 
-console.log('Character occurance object:')
+console.log('\n\nCharacter occurance object:')
 console.log(charactersOccurencesCount('this is a test'));
 console.log(charactersOccurencesCount('This is a tesT'));
 console.log(charactersOccurencesCount('this is a TEST!'));
