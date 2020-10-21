@@ -78,7 +78,7 @@ function filterLongWords (array, i) {
     let newArray = [];
     for (let j = 0; j < array.length; j++) {
         if (array[j].length > i) {
-            newArray.push(array[j])
+            newArray.push(array[j]);
         }
     }
     return newArray;
@@ -86,11 +86,36 @@ function filterLongWords (array, i) {
 
 
 // Bonus 1
-//??????
+function logBetween(lowNum, highNum) {
+    for (let i = lowNum; i <= highNum; i++) {
+        console.log(i);
+    }
+}
 
 
 // Bonus 2
-function charactersOccurencesCount() {
-  
+function charactersOccurencesCount(string) {
+    let array = string.toLowerCase().split('');
+    let characters = {};
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] in characters) {
+            characters[array[i]] += 1;
+        } else {
+            characters[array[i]] = 1;
+        }
+    }
+    return characters;
 }
 
+
+console.log(maxOfTwoNumbers(1,2))
+console.log(maxOfThree(1, 2, 3))
+console.log(isCharacterAVowel("a"))
+console.log(sumArray([1, 2]))
+console.log(multiplyArray(1 , 2))
+console.log(numberOfArguments(1, 1))
+console.log(reverseString("hello"))
+console.log(findLongestWord (["i", "hi"]))
+console.log(filterLongWords (["i", "hi"], 1))
+logBetween(1, 10)
+console.log(charactersOccurencesCount('Strings'))
