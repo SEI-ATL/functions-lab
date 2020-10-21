@@ -1,6 +1,6 @@
 // Question 1
 function maxOfTwoNumbers(num1, num2) {
-    if (num1 > num2) {
+    if (num1 >= num2) {
         return num1;
     } else {
         return num2;
@@ -9,11 +9,11 @@ function maxOfTwoNumbers(num1, num2) {
 
 // Question 2
 function maxOfThree(num1, num2, num3) {
-    if (num1 > num2 && num1 > num3) {
+    if (num1 >= num2 && num1 >= num3) {
         return num1;
-    } else if (num2 > num1 && num2 > num3){
+    } else if (num2 >= num1 && num2 >= num3){
         return num2;
-    } else if (num3 > num1 && num3 > num2){
+    } else {
         return num3;
     }
 }
@@ -109,7 +109,7 @@ function charactersOccurencesCount(string) {
 
 
 console.log(maxOfTwoNumbers(1,2))
-console.log(maxOfThree(1, 2, 3))
+console.log(maxOfThree(3, 3, 4))
 console.log(isCharacterAVowel("a"))
 console.log(sumArray([1, 2]))
 console.log(multiplyArray(1 , 2))
