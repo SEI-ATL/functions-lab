@@ -1,9 +1,9 @@
 // Question 1
 function maxOfTwoNumbers(firstNum, secondNum) {
     if (firstNum > secondNum) {
-        console.log(firstNum + " is larger than " + secondNum);
+        console.log(firstNum + " is bigger than " + secondNum);
     } else {
-        console.log(firstNum + " is less than " + secondNum);
+        console.log(firstNum + " is smaller than " + secondNum);
     }
 
 }
@@ -17,6 +17,7 @@ function maxOfThree(firstNum, secondNum, thirdNum) {
 maxOfThree(7, 2, 3);
 
 // Question 3
+// I can't get this one to work..
 function isCharacterAVowel(isLetter) {
     if (isLetter === 'a' || 'e' || 'i' || 'o' || 'u') {
         console.log("The Character is a vowel");
@@ -86,14 +87,14 @@ console.log(findLongestWord(['one', 'five', 'twenty']))
 
 // Question 8
 function filterLongWords (array, num) {
-    var length = array.length;
-    var longestWords = [];
-    for ( i = 0; i < length; i++) {
+    var size = array.length;
+    var largeWords = [];
+    for ( i = 0; i < size; i++) {
         if (array[i].length > num) {
-            longestWords[longestWords.length] = array[i];
+            largeWords[largeWords.length] = array[i];
         }
     }
-    return longestWords;
+    return largeWords;
   
 }
 console.log(filterLongWords(["Michael", "John"], 3))
