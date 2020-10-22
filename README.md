@@ -30,8 +30,7 @@ Follow the requirements in the list below:
 5. Write a function that returns the number of arguments passed to the function when called.
 6. Define a function `reverseString` that reverses a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 7. Write a function `findLongestWord` that takes an array of words and returns the length of the longest word in the array.
-8. Write a function `filterLongWords` that takes an array of words and a number `i` and returns a new array of words that are longer than `i` characters long.
-
+8. Write a function `filterLongWords` 
 
 **Bonus 1**
 Define a function `logBetween(lowNum, highNum)` that will print every number
