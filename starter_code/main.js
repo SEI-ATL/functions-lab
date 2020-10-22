@@ -115,15 +115,15 @@ function filterLongWords (pikachu,raichu) {
     var longwords = [];
     for (let i = 0; i < pikachu.length; i++) {
         if (pikachu[i].length >= raichu) {
-            longwords.pop(pikachu[i]);
+            longwords.push(pikachu[i]);
         }
         
     }
     return longwords;
     
 }
-let wordss = ["general", "is", "assembly", "cohort", "tuanh", "tired"]
-let atleast = 6
+let wordss = ["general", "is", "assembly", "cohort", "tuanh", "tired"];
+let atleast = 4;
 console.log(filterLongWords(wordss,atleast))
 
 
