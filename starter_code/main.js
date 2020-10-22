@@ -123,7 +123,21 @@ function logBetween(lowNum, highNum) {
 }
 
 // Bonus 2
-function charactersOccurencesCount() {
-  
+function charactersOccurencesCount(str) {
+  let lowerCaseString = str.toLowerCase();
+  let charObject = {};
+  let char,
+      idx,
+      length,
+      count;
+
+      for (idx = 0, length = lowerCaseString.length; idx < length; ++idx) {
+          char = lowerCaseString.charAt(idx);
+          count = charObject[char];
+          charObject[char] = count ? count + 1 : 1;
+      }
+      return charObject;
 }
+
+console.log(charactersOccurencesCount("General Assembly"));
 
