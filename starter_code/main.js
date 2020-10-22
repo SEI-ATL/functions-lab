@@ -7,6 +7,11 @@ function maxOfTwoNumbers(num1, num2) {
     }
 }
 
+console.log(maxOfTwoNumbers(3, 10));
+console.log(maxOfTwoNumbers(100, 10));
+console.log(maxOfTwoNumbers(14.6, 14.7));
+
+
 // Question 2
 function maxOfThree(num1, num2, num3) {
     if (typeof num1 != "number" || typeof num2 != "number" || typeof num3 != "number") {
@@ -70,9 +75,11 @@ console.log(multiplyArray([1,2,3,4,5,6,7,8,9,10]));
 
 
 // Question 5
-let numberOfArguments = function(){
-    
+let numberOfArguments = function(num1, num2, num3){
+    return numberOfArguments.length;
 }
+
+console.log(numberOfArguments());
 
 
 
