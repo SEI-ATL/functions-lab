@@ -79,9 +79,16 @@ function findLongestWord (str, str2) {
 findLongestWord("Rabbit","Dolphin")
 
 // Question 8
-function filterLongWords (list) {
-  
+const xList = ['dog', 'rabbit', 'shark', 3]
+function filterLongWords (xList) {
+    let yList = []
+    for (let i = 0; i < xList.length; i++ ){
+        yList.push(xList[i].pop)
+        let tempList = xList
+    }
+    return console.log(yList)
 }
+filterLongWords(xList)
 
 
 // // Bonus 1
