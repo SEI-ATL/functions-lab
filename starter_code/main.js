@@ -50,37 +50,64 @@ function multiplyArray(array) {
 
 
 // Question 5
-var numberOfArguments = function(test){
- console.log(test);
+function numberOfArguments(argument){
+ return arguments.length;
 }
 
 
 
 // Question 6
-var reverseString = function (){
-
+function reverseString(string) {
+ let newString = '';
+ for (let i = 1; i <= string.length; i++) {
+   let lastLetter = string.charAt(string.length - i);
+   newString = newString.concat('', lastLetter);
+ }
+ return newString;
 };
 
 
 // Question 7
-function findLongestWord () {
-
+function findLongestWord(array) {
+  let longestWord = '';
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length >= longestWord.length) {
+      longestWord = array[i];
+    }
+  }
+  return longestWord.length;
 }
 
 
 // Question 8
-function filterLongWords () {
-
+function filterLongWords(array, num) {
+  let newArray = array.filter(function(word) {
+    return word.length > num;
+  });
+  return newArray;
 }
 
 
 // Bonus 1
-//??????
-
-
-// Bonus 2
-function charactersOccurencesCount() {
-
+function logBetween(lowNum, highNum) {
+  for (let i = lowNum; i <= highNum; i++) {
+    console.log(i);
+  }
 }
 
-console.log(numberOfArguments(1, 2, 3));
+// Bonus 2
+function charactersOccurencesCount(string) {
+  let array = string.split('');
+  let newObject = {};
+  for (let i = 0; i < array.length; i++) {
+    let letter = array[i].toLowerCase();
+    if (letter >= 'a' && letter <= 'z') {
+      if (newObject[letter] >= 1) {
+        newObject[letter] = newObject[letter] + 1;
+      } else {
+        newObject[letter] = 1;
+      }
+    }
+  }
+  return newObject;
+}
