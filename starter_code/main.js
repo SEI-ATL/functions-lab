@@ -3,19 +3,46 @@ function maxOfTwoNumbers() {
 
 }
 
+//Question 1 answer:
+
+function maxofTwoNumbers(firstNum, secondNum){
+  
+    if (firstNum > secondNum) {
+       console.log(firstNum + " is larger than " + secondNum);
+    } else {
+        console.log(firstNum + " is less than " + secondNum);
+    }
+    return;
+  
+}
+
+}
 // Question 2
 function maxOfThree() {
 
 }
+//Question 2 answer:
 
-// Question 3
+function maxOfThree (num1, num2, num3) {     
+    return Math.max (num1, num2, num3); 
+
+
+
+    // Question 3
 function isCharacterAVowel() {
 
 }
 
+//Question 3 answer:
+
+function isCharacterAVowel(argument){
+return 
+	var text;
+    var argument = argument
+}
 // Question 4
 function sumArray() {
- 
+ return (num1, num2, num3)
 }
 
 
