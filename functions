@@ -1,0 +1,22 @@
+function maxofTwoNumbers (x, y) {
+    let x = 4
+    let y = 10
+    if (x > y)
+    return = x
+    else
+    return = y
+}
+console.log ("maxofTwoNumbers")
+
+function maxofThree (x, y, z) {
+    let x = 2
+    let y = 5
+    let z = 10
+    if (x > y, x > z)
+    return = x
+    else if (y > x, y > z)
+    return = y
+    else (z > x, z > y)
+    return = z 
+}
+console.log ("maxofThree")
